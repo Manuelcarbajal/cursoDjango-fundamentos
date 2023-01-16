@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Primer plantilla</title>
+    <style type="text/css">
+        li {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nombre del canal: {{nombreCanal}}</h1>
+    <h3>Fecha de canal: {{Fecha.day}} / {{Fecha.month}} / {{Fecha.year}}</h3>
+    <h3>Num de lenguajes: {{lenguajes|length}}</h3>
+    {% comment %} recorre toda la listacon una condicion ,lenght = muestra la cantidad detro de una lista{% endcomment %}
+    <ul>
+        {% for leng in lenguajes %}
+            {% if leng == 'Python' %}
+            <li style='color:blue;'>
+                {{leng}}
+            </li>
+            {% else %}
+            <li >
+                {% comment %} lower = letra minuscula, upper= letra mayuscula ,first = solo letra inicial {% endcomment %}
+                {{leng|first}} : {{leng|lower}}   
+            </li>
+
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

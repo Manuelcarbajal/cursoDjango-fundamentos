@@ -1,0 +1,23 @@
+{% load static %}
+{% comment %}importar mero arriba static que es lo que conecta todo css,js,imganes{% endcomment %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block  title %}{% endblock %}</title>
+    <link type="text/css"  href="{% static 'css/PlantillaBarraDENavegacion.css' %}" rel='stylesheet'/>
+    {% comment %} importar el css {% endcomment %}
+</head>
+<body>
+    {% include "plantillaBarraDeNavegacion.html" %}
+    <h1>DominikoXd</h1>
+    <img src="{% static "imge/pc.jpg" %}"/>
+    <br/>
+    {% block content %}
+
+    {% endblock %}
+
+
+    <p> pie de pagina </p>
+    <script src="{% static "js/plantillaPadre.js" %}"> </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+.Barra{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    text-transform:uppercase;
+    background: black;
+}
+
+.Barra li{
+    display:inline;
+    margin: 0 30px;
+    color:grey
+}
